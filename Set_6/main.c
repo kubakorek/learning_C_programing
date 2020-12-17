@@ -102,9 +102,10 @@ void create_random_set(CMPLX_SET* pcs,int num){
         pcs->size = num;
     }
 }
-//MARK: - NOT WORKING
+
 void change_set_size(CMPLX_SET* pcs, int num){
-    pcs = (CMPLX*)realloc(pcs, num);
+    pcs-> = realloc(pcs, num*sizeof(CMPLX));
+    pcs->size = num;
 }
 
 void delete_random_set(CMPLX_SET* pcs){
